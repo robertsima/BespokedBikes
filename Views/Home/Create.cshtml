@@ -1,0 +1,47 @@
+﻿@model Sale
+
+<h1> Something </h1>
+<hr /> 
+<div class="row" style="color:#000000"> 
+    <div class="col-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Create a new sale</h5>
+            </div>
+            <div class="card-body">
+
+            <form asp-controller="Home" asp-action="CreateSale" method="post">
+            <div class="mb-3">
+                <label class="form-label">ProductID</label>
+                <input asp-for=ProductID type="number" class="form-control"/>
+            </div>
+
+             <div class = "mb-3">
+                <label class="form-label">SalesPersonID</label>
+                <input asp-for=SalesPersonID type="number" class = "form-control"/>
+            </div>
+
+            <div class = "mb-3">
+                <label class="form-label">CustomerID</label>
+                <input asp-for=CustomerID type="number" class = "form-control"/>
+            </div>
+
+            <div class = "mb-3">
+                <label class="form-label">SalesDate</label>
+                <input asp-for=SalesDate type="date" class = "form-control"/>
+            </div>
+
+            <div class="mb-3"> 
+                <button type = "submit" class="btn btn-primary"> Add Sale</button>
+            </div>
+            </form>
+
+            </div>
+            <div class="card-footer">
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+

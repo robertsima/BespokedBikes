@@ -1,0 +1,187 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+h2 {
+    margin-top: 3%%;
+    color: #EEEEEE;
+}
+
+h3 {
+    margin-top: 5%;
+    color: #EEEEEE;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Segoe UI';
+    background-color: #222629;
+    color: #EEEEEE;
+}
+
+.table { 
+    background:#fff;
+    max-height: 500px; 
+    overflow-y: auto;
+/*    box-shadow: 0pc 10px 50px 0px rgba(0,0,0,0.5);
+*/    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+navbar-brand {
+    background-color: #222629;
+}
+
+.contact-name {
+    background-color: #393E46;
+    border-radius: 5px;
+    width: 500px;
+    margin: 7px;
+    font-family: 'Segoe UI'
+}
+
+.contact-email {
+    background-color: #393E46;
+    border-radius: 5px;
+    width: 500px;
+    margin: 7px;
+    font-family: 'Segoe UI'
+}
+
+.contact-message {
+    background-color: #393E46;
+    border-radius: 5px;
+    width: 500px;
+    height: 300px;
+    margin: 7px;
+    font-family: 'Segoe UI'
+}
+
+.contact-text {
+    background-color: #393E46;
+    margin-left: 25%;
+    width: 500px;
+    font-family: 'Segoe UI';
+    text-align: center;
+}
+
+.contact-div {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-div {
+    border-radius: 20px;
+    background-color: #393E46;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text-wrap {
+    float: left;
+    position: relative;
+    left: 50%;
+}
+
+.text-content {
+    float: left;
+    position: relative;
+    left: -50%;
+}
+
+
+.body-text {
+    font-family: 'Segoe UI';
+    margin-top: 5%;
+    width: 90%;
+}
+
+.portfolio-text {
+    margin-left: 5%;
+    font-family: 'Segoe UI';
+    margin-top: 5%;
+    width: 90%;
+}
+
+.portfolio-img {
+    display: block;
+    border-radius: 10px;
+    border: 2px solid #3EB489;
+    padding: 5px;
+    width: 780px;
+    height: auto;
+}
+
+border-top {
+    background-color: #00ADB5;
+}
+
+::placeholder {
+    color: #EEEEEE;
+    opacity: .6;
+}
+
+:-ms-input-placeholder {
+    color: #EEEEEE;
+}
+
+input[type=email] {
+    color: #EEEEEE;
+}
+
+input[name=name] {
+    color: #EEEEEE;
+}
+
+textarea[name=message] {
+    color: #EEEEEE;
+}
+
+.submit_button {
+    transition-duration: 0.4s;
+    width: 80px;
+    height: 50px;
+    background-color: #222831;
+    color: white;
+    border: 2px solid #3EB489;
+    border-radius: 10px;
+}
+
+    .submit_button:hover {
+        background-color: #3EB489;
+        color: white;
+    }
+
+.navbar-toggler {
+    width: 47px;
+    height: 34px;
+    background-color: #3EB489;
+}
+
+    .navbar-toggler .line {
+        width: 100%;
+        float: left;
+        height: 2px;
+        background-color: #fff;
+        margin-bottom: 5px;
+    }

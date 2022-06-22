@@ -1,0 +1,225 @@
+﻿@{
+    ViewData["Title"] = "Display Data";
+    string[] SalesPersonTableHeaders = new string[]
+    {
+    "SalesPersonID"
+      ,"First Name"
+      ,"Last Name"
+      ,"SalesPerson Address"
+      ,"Phone"
+      ,"Start Date"
+      ,"Termination Date"
+      ,"Manager"
+    };
+
+    string[] ProductTableHeaders = new string[]
+    {
+       "ProductID"
+      ,"Product Name"
+      ,"Manufacturer"
+      ,"Style"
+      ,"Purchase Price"
+      ,"Sale Price"
+      ,"Quantity On Hand"
+      ,"Commision Percentage"
+    };
+
+    string[] CustomerTableHeaders = new string[]
+    {
+       "CustomerID"
+      ,"First Name"
+      ,"Last Name"
+      ,"Phone"
+      ,"Customer Address"
+      ,"Start Date"
+    };
+
+    string[] SalesTableHeaders = new string[]
+    {
+       "SaleID"
+      ,"ProductID"
+      ,"SalesPersonID"
+      ,"CustomerID"
+      ,"Sales Date"
+    };
+
+   }
+
+   @*    displays a list of Salespeople
+*@
+
+<section id="salespeople">
+    <br />
+<h2 style="margin-top:5%"> Salespeople View </h2>
+<div class = "table">
+    <table class="table table-bordered table-hover">
+        <thread>
+            <tr>
+                    @{
+                        foreach(var head in SalesPersonTableHeaders)
+                        {
+                                <th>
+                                @head
+                                </th>
+                        }
+                    }
+            </tr>
+        </thread>
+        @{
+            if(Model!=null)
+            {
+                foreach(var Data in Model.salespeople)
+                {
+                     <tr> 
+                         <td>@Data.SalesPersonID</td>
+                         <td>@Data.FirstName</td>
+                         <td>@Data.LastName</td>
+                         <td>@Data.SalesPersonAddress</td>
+                         <td>@Data.Phone</td>
+                         <td>@Data.StartDate</td>
+                         <td>@Data.TerminationDate</td>
+                         <td>@Data.Manager</td>
+                     </tr> 
+                }
+            }
+        }
+    </table>
+    </div>
+    </section>
+
+    <br />
+
+@*    displays a list of products
+*@ 
+
+            
+@*            <a class= "nav-link" asp-area = "" asp-controller="Home" asp-action = "Create"> Create something </a>
+*@
+ <section id="products">
+         <br />
+<h2> Products View </h2>
+<div class = "table">
+    <table class="table table-bordered table-hover">
+        <thread>
+            <tr>
+                    @{
+                        foreach(var head in ProductTableHeaders)
+                        {
+                                <th>
+                                @head
+                                </th>
+                        }
+                    }
+            </tr>
+        </thread>
+        @{
+            if(Model!=null)
+            {
+                foreach(var Data in Model.products)
+                {
+                     <tr> 
+                         <td>@Data.ProductID</td>
+                         <td>@Data.ProductName</td>
+                         <td>@Data.Manufacturer</td>
+                         <td>@Data.Style</td>
+                         <td>@Data.PurchasePrice</td>
+                         <td>@Data.SalePrice</td>
+                         <td>@Data.QtyOnHand</td>
+                         <td>@Data.CommisionPercentage</td>
+                     </tr> 
+                }
+            }
+        }
+    </table>
+    </div>
+    </section>
+
+        <br />
+
+    @*    displays a list of customers
+*@ 
+
+<section id="customers">
+        <br />
+<h2> Customers View </h2>
+<div class = "table">
+     <table class="table table-bordered table-hover">
+        <thread>
+            <tr>
+                    @{
+                        foreach(var head in CustomerTableHeaders)
+                        {
+                                <th>
+                                @head
+                                </th>
+                        }
+                    }
+            </tr>
+        </thread>
+        @{
+            if(Model!=null)
+            {
+                foreach(var Data in Model.customers)
+                {
+                     <tr> 
+                         <td>@Data.CustomerID</td>
+                         <td>@Data.FirstName</td>
+                         <td>@Data.LastName</td>
+                         <td>@Data.Phone</td>
+                         <td>@Data.CustomerAddress</td>
+                         <td>@Data.StartDate</td>
+                     </tr> 
+                }
+            }
+        }
+    </table>
+    </div>
+</section>
+
+        <br />
+
+
+
+        @*    displays a list of sales
+*@ 
+
+<section id="sales">
+        <br />
+
+<h2> Sales View </h2>
+<div class = "table">
+        <table class="table table-bordered table-hover">
+        <thread>
+            <tr>
+                    @{
+                        foreach(var head in SalesTableHeaders)
+                        {
+                                <th>
+                                @head
+                                </th>
+                        }
+                    }
+            </tr>
+        </thread>
+        @{
+            if(Model!=null)
+            {
+                foreach(var Data in Model.sales)
+                {
+                     <tr> 
+                         <td>@Data.SaleID</td>
+                         <td>@Data.ProductID</td>
+                         <td>@Data.SalesPersonID</td>
+                         <td>@Data.CustomerID</td>
+                         <td>@Data.SalesDate</td>
+                     </tr> 
+                }
+            }
+        }
+    </table>
+    </div>
+
+                <div class="mb-3"> 
+                <button onclick="location.href = '@Url.Action("Create", "Home")'" type = "button" class="btn btn-primary"> Create a sale </button>
+                </div>
+    </section>
